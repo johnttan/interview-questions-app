@@ -1,0 +1,20 @@
+* {
+  font-family: 'Open Sans' sans-serif;
+}
+.sidemenucol {
+  padding-left: 0% !important;
+  width: 20% !important;
+}
+.maincol {
+  width: 80% !important;
+}
+.ui.two.column.page.grid {
+  width: 100% !important;
+  padding: 1% !important;
+}
+#numberofquestionsgenerate {
+  width: 10% !important;
+}
+span.requirednumberofquestions {
+  color: #f00;
+}
