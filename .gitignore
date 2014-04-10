@@ -8,3 +8,4 @@ heroku
 dist
 lib/config/env/production.js
 .idea/workspace.xml
+.idea/
