@@ -23,13 +23,13 @@ angular.module('interviewappApp')
             z++
       return picked
     $scope.generatebutton = ->
-      if $scope.generate.role isnt null
-        $scope.generated = angular.copy($scope.generate)
-        $scope.generatedqs['role'] = $scope.filterquestion($scope.questions, 'role', $scope.generated.role, true, $scope.limit)
+      # if $scope.generate.role isnt null
+      #   $scope.generated = angular.copy($scope.generate)
+      #   $scope.generatedqs['role'] = $scope.filterquestion($scope.questions, 'role', $scope.generated.role, true, $scope.limit)
 
-      $scope.generatedqs['opening'] = $scope.filterquestion($scope.questions, 'category', 'Opening', true, $scope.limit)
-      $scope.generatedqs['situational'] = $scope.filterquestion($scope.questions, 'category', 'Situational', true, $scope.limit)
-      $scope.generatedqs['behavior'] = $scope.filterquestion($scope.questions, 'category', 'Behavior', true, $scope.limit)
-      $scope.generatedqs['closing'] = $scope.filterquestion($scope.questions, 'category', 'Closing', true, $scope.limit)
+      # $scope.generatedqs['opening'] = $scope.filterquestion($scope.questions, 'category', 'Opening', true, $scope.limit)
+      # $scope.generatedqs['situational'] = $scope.filterquestion($scope.questions, 'category', 'Situational', true, $scope.limit)
+      # $scope.generatedqs['behavior'] = $scope.filterquestion($scope.questions, 'category', 'Behavior', true, $scope.limit)
+      # $scope.generatedqs['closing'] = $scope.filterquestion($scope.questions, 'category', 'Closing', true, $scope.limit)
 
     ]

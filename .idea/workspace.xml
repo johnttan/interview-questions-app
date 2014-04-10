@@ -25,16 +25,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/index.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="15" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-0.031185031" vertical-offset="430" max-vertical-offset="1392">
-                  <folding>
-                    <marker date="1396724287991" expanded="true" signature="1083:1146" placeholder="{...}" />
-                    <marker date="1396724287991" expanded="true" signature="1083:1160" placeholder="{...}" />
-                    <marker date="1396724287991" expanded="true" signature="1083:1174" placeholder="{...}" />
-                    <marker date="1396724287991" expanded="true" signature="1105:1146" placeholder="{...}" />
-                  </folding>
+                <state line="28" column="22" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.5155351" vertical-offset="0" max-vertical-offset="1392">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -42,7 +37,7 @@
           <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bower.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="30" selection-start="301" selection-end="301" vertical-scroll-proportion="-7.04" vertical-offset="0" max-vertical-offset="384">
+                <state line="11" column="30" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="384">
                   <folding />
                 </state>
               </provider>
@@ -51,7 +46,7 @@
           <file leaf-file-name="search.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/search.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="66" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+                <state line="14" column="66" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="720">
                   <folding />
                 </state>
               </provider>
@@ -60,7 +55,7 @@
           <file leaf-file-name="home.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/home.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="49" column="39" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1824">
+                <state line="49" column="39" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="1824">
                   <folding />
                 </state>
               </provider>
@@ -69,7 +64,7 @@
           <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/app.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="12" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+                <state line="6" column="12" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="480">
                   <folding />
                 </state>
               </provider>
@@ -78,7 +73,7 @@
           <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="29" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
+                <state line="34" column="29" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="752">
                   <folding />
                 </state>
               </provider>
@@ -114,7 +109,7 @@
           <file leaf-file-name="production.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/config/env/production.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="82" selection-start="148" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+                <state line="7" column="82" selection-start="148" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="240">
                   <folding />
                 </state>
               </provider>
@@ -127,7 +122,7 @@
           <file leaf-file-name="sidemenu.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/sidemenu.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="176">
+                <state line="5" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="176">
                   <folding />
                 </state>
               </provider>
@@ -136,16 +131,16 @@
           <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="29" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
+                <state line="8" column="3" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="224">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="generate.coffee" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="generate.coffee" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/generate.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="26" selection-start="801" selection-end="801" vertical-scroll-proportion="0.43333334" vertical-offset="0" max-vertical-offset="960">
+                <state line="13" column="15" selection-start="445" selection-end="445" vertical-scroll-proportion="0.23318386" vertical-offset="0" max-vertical-offset="892">
                   <folding />
                 </state>
               </provider>
@@ -154,7 +149,7 @@
           <file leaf-file-name="main.styl" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/styles/main.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="12" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+                <state line="14" column="12" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="320">
                   <folding />
                 </state>
               </provider>
@@ -185,17 +180,17 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.coffee" />
         <option value="$PROJECT_DIR$/app/views/index.jade" />
         <option value="$PROJECT_DIR$/app/styles/main.styl" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/generate.coffee" />
         <option value="$PROJECT_DIR$/app/views/home.jade" />
         <option value="$PROJECT_DIR$/lib/config/env/production.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/generate.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
+    <option name="x" value="-1924" />
     <option name="y" value="-4" />
     <option name="width" value="1928" />
-    <option name="height" value="1156" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -305,8 +300,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="fileTemplates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -314,14 +309,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -330,6 +317,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -375,26 +370,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1156" extended-state="6" />
+    <frame x="-1924" y="-4" width="1928" height="1088" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11666667" sideWeight="0.67153996" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39980355" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846004" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39980355" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -411,16 +406,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.tmp/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.03206413" vertical-offset="0" max-vertical-offset="998">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.03206413" vertical-offset="0" max-vertical-offset="998" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.tmp/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/search.jade">
@@ -439,7 +430,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
+        <state line="8" column="3" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="224">
           <folding />
         </state>
       </provider>
@@ -467,16 +458,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/search.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="224">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="224" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/questions.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
+        <state line="7" column="25" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/config/env/development.js">
@@ -507,21 +494,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.jade">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/generate.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="15" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-0.031185031" vertical-offset="430" max-vertical-offset="1392">
-          <folding>
-            <marker date="1396724287991" expanded="true" signature="1083:1146" placeholder="{...}" />
-            <marker date="1396724287991" expanded="true" signature="1083:1160" placeholder="{...}" />
-            <marker date="1396724287991" expanded="true" signature="1083:1174" placeholder="{...}" />
-            <marker date="1396724287991" expanded="true" signature="1105:1146" placeholder="{...}" />
-          </folding>
+        <state line="13" column="15" selection-start="445" selection-end="445" vertical-scroll-proportion="0.23318386" vertical-offset="0" max-vertical-offset="892">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/generate.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="801" selection-end="801" vertical-scroll-proportion="0.43333334" vertical-offset="0" max-vertical-offset="960">
+        <state line="28" column="22" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.5155351" vertical-offset="0" max-vertical-offset="1392">
           <folding />
         </state>
       </provider>
