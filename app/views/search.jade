@@ -2,27 +2,15 @@
    Created by John Tan on 4/3/14.
 
 div You can combine queries | Remember to delete unwanted search terms
-.ui.small.icon.input
-    input(type="text" placeholder="Questions" ng-model="search_question_name")
-    i.search.icon
-.ui.small.icon.input
-    input(type="text" placeholder="Roles" ng-model="search_question_role")
-    i.search.icon
-.ui.small.icon.input
-    input(type="text" placeholder="Categories" ng-model="search_question_category")
-    i.search.icon
-.ui.small.icon.input
-    input(type="text" placeholder="Sub-Category" ng-model="search_question_subcategory")
-    i.search.icon
-.ui.small.icon.input
-    input(type="text" placeholder="Comments" ng-model="search_question_comments")
+.ui.small.icon.input(ng-repeat="(key, value) in questionskeys")
+    input(type="text" placeholder="{{key}}" ng-model="search_question_name")
     i.search.icon
 .ui.small.icon.input
     |# of Results
     input(type="text" placeholder="Limit # of Results" ng-model="filterlimit")
 
 div.ui.items
-    div.item(ng-repeat = "question in questions | limitTo: filterlimit | filter: {question: search_question_name, category: search_question_category, 'sub-category': search_question_subcategory, comments: search_question_comments, role: search_question_role}")
+    div.item(ng-repeat = "question in questions | limitTo: filterlimit | filter: {question: search_question_name, category: search_question_category, 'subcategory': search_question_subcategory, comments: search_question_comments, role: search_question_role}")
         a.ui.small.header
             |{{question.question}}
         .ui.horizontal.icon.divider
@@ -32,7 +20,7 @@ div.ui.items
         .ui.label category |
             .detail {{question.category}}
         .ui.label sub-category |
-            .detail {{question["sub-category"]}}
+            .detail {{question.subcategory}}
         .ui.label comments |
             .detail {{question.comments}}
         div

@@ -9,47 +9,23 @@ div(ng-controller="GenerateCtrl")
             i.setting.icon
         span.requirednumberofquestions(ng-show="!limit")   Required
         .grouped.inline.fields
-            .field
+            .field(quick-ng-repeat="role in questionskeys.role")
                 .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_Executive" ng-model="generate.role" value="Executive")
-                    label(for="gen_Executive") Executive
-            .field
-                .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_RN/Nurse" ng-model="generate.role" value="RN/Nurse")
-                    label(for="gen_RN/Nurse") RN/Nurse
-
-            .field
-                .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_CMA" ng-model="generate.role" value = "CMA")
-                    label(for="gen_CMA") CMA
-
-            .field
-                .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_CNA" ng-model="generate.role" value = "CNA")
-                    label(for="gen_CNA") CNA
-
-            .field
-                .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_Maintenance" ng-model="generate.role" value = "Maintenance")
-                    label(for="gen_Maintenance") Maintenance
-
-            .field
-                .ui.radio.checkbox
-                    input(type="radio" name="roles" id="gen_Dietary" ng-model="generate.role" value = "Dietary")
-                    label(for="gen_Dietary") Dietary
+                    input(type="radio" name="roles" id="gen_"+"{{role}}" ng-model="generate.role" value="{{role}}")
+                    label(for="gen_"+"{{role}}") {{role}}
 
         .ui.button(ng-click="generatebutton()")
             i.tasks.icon
             |Generate {{generate.role}} Questions
-    .ui.header Opening
+    .ui.header(ng-repeat-start="category in questionskeys.category") {{category}}
     .ui.horizontal.divider
-    .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs['opening'] | orderBy: 'comments' | limitTo: limit")
+    .ui.items(ng-repeat-end)
+        div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate | limitTo: limitcopy")
             a.ui.small.header
                 |{{question.question}}
             .ui.horizontal.icon.divider
                 i.question.circular.icon
-                .detail {{question["sub-category"]}}
+                .detail {{question.subcategory}}
             .ui.label comments |
                 .detail {{question.comments}}
             div
@@ -57,51 +33,12 @@ div(ng-controller="GenerateCtrl")
     .ui.header {{generated.role}}
     .ui.horizontal.divider
     .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs['role'] | orderBy: 'comments' | limitTo: limit")
+        div.item(quick-ng-repeat = "question in generatedqs.Role | orderBy: 'comments' | limitTo: limitcopy")
             a.ui.small.header
                 |{{question.question}}
             .ui.horizontal.icon.divider
                 i.question.circular.icon
-                .detail {{question["sub-category"]}}
-            .ui.label comments |
-                .detail {{question.comments}}
-            div
-            .ui.label.answers answers
-    .ui.header Situational
-    .ui.horizontal.divider
-    .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs['situational'] | orderBy: 'comments' | limitTo: limit")
-            a.ui.small.header
-                |{{question.question}}
-            .ui.horizontal.icon.divider
-                i.question.circular.icon
-                .detail {{question["sub-category"]}}
-            .ui.label comments |
-                .detail {{question.comments}}
-            div
-            .ui.label.answers answers
-    .ui.header Behavior
-    .ui.horizontal.divider
-    .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs['behavior'] | orderBy: 'comments' | limitTo: limit")
-            a.ui.small.header
-                |{{question.question}}
-            .ui.horizontal.icon.divider
-                i.question.circular.icon
-                .detail {{question["sub-category"]}}
-            .ui.label comments |
-                .detail {{question.comments}}
-            div
-            .ui.label.answers answers
-    .ui.header Closing
-    .ui.horizontal.divider
-    .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs['closing'] | orderBy: 'comments' | limitTo: limit")
-            a.ui.small.header
-                |{{question.question}}
-            .ui.horizontal.icon.divider
-                i.question.circular.icon
-                .detail {{question["sub-category"]}}
+                .detail {{question.subcategory}}
             .ui.label comments |
                 .detail {{question.comments}}
             div

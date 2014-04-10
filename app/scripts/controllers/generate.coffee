@@ -1,5 +1,5 @@
 angular.module('interviewappApp')
-.controller 'GenerateCtrl', ['$scope', 'Questions', ($scope, Questions) ->
+.controller 'GenerateCtrl', ['$scope', 'Questions', 'QuestionsKeys', ($scope, Questions, QuestionsKeys) ->
     if Questions.questionsobject is undefined
       Questions.getquestions()
 
@@ -23,14 +23,10 @@ angular.module('interviewappApp')
             z++
       return picked
     $scope.generatebutton = ->
-
+      $scope.limitcopy = angular.copy($scope.limit)
       if $scope.generate.role isnt null
          $scope.generated = angular.copy($scope.generate)
-         $scope.generatedqs['role'] = $scope.filterquestion($scope.questions, 'role', $scope.generated.role, true, $scope.limit)
-
-      $scope.generatedqs['opening'] = $scope.filterquestion($scope.questions, 'category', 'Opening', true, $scope.limit)
-      $scope.generatedqs['situational'] = $scope.filterquestion($scope.questions, 'category', 'Situational', true, $scope.limit)
-      $scope.generatedqs['behavior'] = $scope.filterquestion($scope.questions, 'category', 'Behavior', true, $scope.limit)
-      $scope.generatedqs['closing'] = $scope.filterquestion($scope.questions, 'category', 'Closing', true, $scope.limit)
-
+         $scope.generatedqs['Role'] = $scope.filterquestion($scope.questions, 'role', $scope.generated.role, true, $scope.limitcopy)
+      for category in $scope.questionskeys['category']
+        $scope.generatedqs[category] = $scope.filterquestion($scope.questions, 'category', category, true, $scope.limitcopy)
     ]
