@@ -5,9 +5,16 @@ div(ng-controller="GenerateCtrl")
         .ui.header Select Role
             .sub.header Will include general/variety questions by default.
         .ui.small.icon.input#numberofquestionsgenerate
-            input(type="text" placeholder="# of Questions" ng-model="limit")
-            i.setting.icon
-        span.requirednumberofquestions(ng-show="!limit")   Required
+            |Role
+            .requirednumberofquestions(ng-show="!limit['role']") Required
+            input(type="text" placeholder="# of Role" ng-model="limit['role']")
+        //Removing required notification until it can be placed on top of input field.
+        //Looks odd when it's inline.
+        .ui.small.icon.input#numberofquestionsgenerate(ng-repeat="category in questionskeys.category")
+            |{{category}}
+            .requirednumberofquestions(ng-show="!limit[category]" )   Required
+            input(type="text" placeholder="# of {{category}}" ng-model="limit[category]")
+        //span
         .grouped.inline.fields
             .field(quick-ng-repeat="role in questionskeys.role")
                 .ui.radio.checkbox
@@ -19,27 +26,37 @@ div(ng-controller="GenerateCtrl")
             |Generate {{generate.role}} Questions
     .ui.header(ng-repeat-start="category in questionskeys.category") {{category}}
     .ui.horizontal.divider
-    .ui.items(ng-repeat-end)
-        div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate | limitTo: limitcopy")
-            a.ui.small.header
-                |{{question.question}}
-            .ui.horizontal.icon.divider
-                i.question.circular.icon
-                .detail {{question.subcategory}}
-            .ui.label comments |
-                .detail {{question.comments}}
-            div
-            .ui.label.answers answers
+    .ui.divided.list(ng-repeat-end)
+        div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate | limitTo: limitcopy[category]" class="{{category + 'q' + $index}}")
+            .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers") Answer
+            .content.questionscontent
+                a.ui.small.header#questionsheader
+                    |{{question.question}}
+                div
+                .ui.label subcategory |
+                    .detail {{question.subcategory}}
+                .ui.label comments |
+                    .detail {{question.comments}}
+                div(ng-show="displayanswers")
+                    div.ui.horizontal.icon.divider
+                        i.info.icon
+                    div
+                        |{{question.answers}}
     .ui.header {{generated.role}}
     .ui.horizontal.divider
-    .ui.items
-        div.item(quick-ng-repeat = "question in generatedqs.Role | orderBy: 'comments' | limitTo: limitcopy")
-            a.ui.small.header
-                |{{question.question}}
-            .ui.horizontal.icon.divider
-                i.question.circular.icon
-                .detail {{question.subcategory}}
-            .ui.label comments |
-                .detail {{question.comments}}
-            div
-            .ui.label.answers answers
+    .ui.divided.list
+        div.item(quick-ng-repeat = "question in generatedqs.Role | orderBy: 'comments' | limitTo: limitcopy['role']" class = "{{'role'+'q'+$index}}")
+            .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers") Answer
+            .content.questionscontent
+                a.ui.small.header#questionsheader
+                    | {{question.question}}
+                div
+                .ui.label subcategory |
+                    .detail {{question.subcategory}}
+                .ui.label comments |
+                    .detail {{question.comments}}
+                div(ng-show="displayanswers")
+                    div.ui.horizontal.icon.divider
+                        i.info.icon
+                    div
+                        | {{question.answers}}

@@ -15,6 +15,6 @@
 #numberofquestionsgenerate {
   width: 10% !important;
 }
-span.requirednumberofquestions {
+.requirednumberofquestions {
   color: #f00;
 }
