@@ -30,7 +30,7 @@ html.no-js
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" media="screen, print">
     <!-- endbuild -->
 
   body(ng-app="interviewappApp")
@@ -44,11 +44,11 @@ html.no-js
     // Add your site or application content here
     include templates
 
-    .ui.two.column.page.grid
+    .ui.two.column.page.grid(ng-controller="GlobalCtrl")
         .row
             h4.ui.inverted.blue.block.header Interview Questions Bank
 
-        .column.sidemenucol
+        .column.sidemenucol(ng-show="!printview")
             include sidemenu
         .column.maincol
             .container.mainview(ng-view)
@@ -78,5 +78,6 @@ html.no-js
     <script src="scripts/controllers/side.js"></script>
     <script src="scripts/controllers/search.js"></script>
     <script src="scripts/controllers/generate.js"></script>
+    <script src="scripts/controllers/global.js"></script>
     <!-- endbuild -->
 

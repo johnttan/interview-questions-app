@@ -18,3 +18,10 @@
 .requirednumberofquestions {
   color: #f00;
 }
+.answersbox {
+  color: #008000;
+}
+.questioncategoryheader {
+  color: #00f;
+  font: bold;
+}
