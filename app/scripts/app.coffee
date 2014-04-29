@@ -5,7 +5,8 @@ angular.module('interviewappApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'QuickList'
+  'QuickList',
+  'LocalStorageModule'
 ])
   .config ($routeProvider, $locationProvider) ->
     $routeProvider
@@ -19,6 +20,9 @@ angular.module('interviewappApp', [
         controller: 'BrowseCtrl'
       .when '/update',
         controller: 'UpdateCtrl'
+      .when '/recent/:recentname/:time',
+        controller: 'RecentViewCtrl'
+        templateUrl: 'recentview'
       .otherwise
         redirectTo: '/'
 

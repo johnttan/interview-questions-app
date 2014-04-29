@@ -1,5 +1,5 @@
 angular.module('interviewappApp')
-.controller 'GenerateCtrl', ['$scope', 'Questions', 'QuestionsKeys', ($scope, Questions, QuestionsKeys) ->
+.controller 'GenerateCtrl', ['$scope', 'Questions', ($scope, Questions) ->
     if Questions.questionsobject is undefined
       Questions.getquestions()
     $scope.limit = {}
@@ -15,10 +15,7 @@ angular.module('interviewappApp')
         pickeduid = []
         picked = []
         z = 0
-        console.log(limit)
         value = 'role' if filterby == 'role'
-        console.log(value)
-        console.log(limit[value])
         while z < limit[value]
           i = filtered[Math.floor(Math.random() * filtered.length)]
           if i.uid not in pickeduid
@@ -33,5 +30,13 @@ angular.module('interviewappApp')
          $scope.generatedqs['Role'] = $scope.filterquestion($scope.questions, 'role', $scope.generated.role, true, $scope.limitcopy)
       for category in $scope.questionskeys['category']
         $scope.generatedqs[category] = $scope.filterquestion($scope.questions, 'category', category, true, $scope.limitcopy)
-      console.log($scope.generatedqs)
+    $scope.savegenerated = ->
+        if $scope.candidatename isnt undefined
+          tobeadded = {}
+          for own category, questionarray of $scope.generatedqs
+            tobeadded[category] = questionarray
+          console.log(tobeadded)
+          $scope.addrecentquestions($scope.candidatename, tobeadded)
+          console.log('savegenerated')
+          console.log($scope.recentquestions)
     ]

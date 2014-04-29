@@ -1,0 +1,9 @@
+//
+   Created by John Tan on 4/21/14.
+
+.blue.item(ng-controller="RecentQuestionsCtrl") Recently Generated
+    .menu
+        a.item(ng-repeat="name in recentquestionskeys" "ng-href=/recent/{{name.split('__')[1]}}/{{name.split('__')[0]}}") {{name.split('__')[1]}}
+    .ui.button(ng-click="clearrecent()")
+        i.tasks.icon
+        | Clear History
