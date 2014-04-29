@@ -1,6 +1,10 @@
 //
    Created by John Tan on 4/4/14.
 div(ng-controller="GenerateCtrl")
+    .ui.form
+        .ui.header Enter Candidate Name
+        .requirednumberofquestions(ng-show="!candidatename") Required
+        input(type="text" placeholder="Interviewee" ng-model="candidatename")
     .ui.form(ng-show="!printview")
         .ui.header Select Role
             .sub.header Enter # of questions per category
@@ -25,6 +29,9 @@ div(ng-controller="GenerateCtrl")
             i.tasks.icon
             |Generate {{generate.role}} Questions
 
+    .ui.button(ng-click="savegenerated()")
+        i.tasks.icon
+        |Save
     .ui.button(ng-click="toggleprintview()")
         i.tasks.icon
         |Print View

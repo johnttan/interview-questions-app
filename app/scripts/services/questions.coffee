@@ -1,11 +1,21 @@
 angular.module("interviewappApp")
-.service "Questions", ['$resource',
+.service "Questions", ['$resource', '$q'
     class QuestionsResource
-      constructor: (@$resource)->
+      constructor: (@$resource, @$q)->
       resourceservice: ->
         @$resource "/getquestions",
           query:
             method: "GET"
       getquestions: ->
         @questionsobject = @resourceservice().query()
+        @deferred =  @$q.defer()
+        @transformedqs = @deferred.promise
+        @questionsobject.$promise.then(
+            do(deferred = @deferred)->
+              (value)->
+                transformedjson = {}
+                for question in value
+                  transformedjson[question['_id']] = question
+                deferred.resolve(transformedjson)
+        )
     ]
