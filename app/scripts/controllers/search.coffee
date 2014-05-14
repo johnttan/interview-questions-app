@@ -5,7 +5,7 @@ angular.module('interviewappApp')
     if Questions.questionsobject is undefined
       Questions.getquestions()
       QuestionsKeys.getquestionskeys()
-
+    $scope.search = {}
     $scope.questions = Questions.questionsobject
     $scope.filterlimit = 50
     $scope.questionskeys = QuestionsKeys.questionskeysobject

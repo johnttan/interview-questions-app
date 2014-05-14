@@ -19,6 +19,7 @@ angular.module('interviewappApp', [
         controller: 'BrowseCtrl'
       .when '/update',
         controller: 'UpdateCtrl'
+        templateUrl: 'update'
       .when '/recent/:recentname/:time',
         controller: 'RecentViewCtrl'
         templateUrl: 'recentview'

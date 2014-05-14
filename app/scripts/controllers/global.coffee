@@ -23,8 +23,8 @@ angular.module('interviewappApp')
     if Questions.questionsobject is undefined
       Questions.getquestions()
       QuestionsKeys.getquestionskeys()
-    $scope.questions = Questions.questionsobject
-    $scope.questionskeys = QuestionsKeys.questionskeysobject
+    $scope.questions = Questions
+    $scope.questionskeys = QuestionsKeys
     $scope.generatedqs = {}
     $scope.transformedjson = {}
     Questions.transformedqs.then(

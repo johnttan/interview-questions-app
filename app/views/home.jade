@@ -14,13 +14,13 @@ div(ng-controller="GenerateCtrl")
             input(type="text" placeholder="# of Role" ng-model="limit['role']")
         //Removing required notification until it can be placed on top of input field.
         //Looks odd when it's inline.
-        .ui.small.icon.input#numberofquestionsgenerate(ng-repeat="category in questionskeys.category")
+        .ui.small.icon.input#numberofquestionsgenerate(ng-repeat="category in questionskeys.questionskeysobject.category")
             |{{category}}
             //.requirednumberofquestions(ng-show="!limit[category]" )   Required
             input(type="text" placeholder="# of {{category}}" ng-model="limit[category]")
         //span
         .grouped.inline.fields
-            .field(quick-ng-repeat="role in questionskeys.role")
+            .field(quick-ng-repeat="role in questionskeys.questionskeysobject.role")
                 .ui.radio.checkbox
                     input(type="radio" name="roles" id="gen_"+"{{role}}" ng-model="generate.role" value="{{role}}")
                     label(for="gen_"+"{{role}}") {{role}}
@@ -35,7 +35,7 @@ div(ng-controller="GenerateCtrl")
     .ui.button(ng-click="toggleprintview()")
         i.tasks.icon
         |Print View
-    .ui.header.questioncategoryheader(ng-repeat-start="category in questionskeys.category") {{category}}
+    .ui.header.questioncategoryheader(ng-repeat-start="category in questionskeys.questionskeysobject.category") {{category}}
     .ui.horizontal.divider
     .ui.list(ng-repeat-end)
         div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate | limitTo: limitcopy[category]" class="{{category + 'q' + $index}}")
