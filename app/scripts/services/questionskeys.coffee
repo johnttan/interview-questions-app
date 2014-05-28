@@ -9,4 +9,5 @@ angular.module("interviewappApp")
             isArray: false
       getquestionskeys: ->
         @questionskeysobject = @resourceservice().get()
+
   ]
