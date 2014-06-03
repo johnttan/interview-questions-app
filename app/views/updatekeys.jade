@@ -1,12 +1,21 @@
 //
    Created by John Tan on 6/2/14.
+.ui.header Select the options you want to keep
 .ui.form.segment
-    .field(ng-repeat="(key, value) in addquestionskeys()")
+    .grouped.inline.fields(ng-repeat="(key, value) in questionskeysformatted()" ng-controller="KeysFormCtrl")
         label {{key}}
-        .ui.left.labeled.icon.input
-            input(type="text" placeholder="{{placeholder(key, value)}}" ng-model="qtobeadded[key]")
-            i.question.icon
-            .ui.corner.label
-                i.icon.asterisk
-    .ui.button.add(ng-click="showAdd = !showAdd" ng-show="showAdd") Clear
-.ui.button.add(ng-click="refresh()") Update Database
+        .field(ng-repeat="option in value")
+            .ui.checkbox
+                input(id="{{option}}" + "_updatekeys" type="checkbox" ng-model = "picked" ng-change="changechecked(key, option, picked)" ng-true-value="true" ng-false-value="false")
+                label(for="{{option}}" + "_updatekeys") {{option}}
+        .ui.button.newoption(ng-click="showAdd = !showAdd" ng-show="!showAdd") New Option
+        .field(ng-show="showAdd")
+            .ui.left.labeled.icon.input
+                input(type="text" placeholder="New option" ng-model="optiontobeadded")
+            .ui.button.addkey(ng-click="addkey(optiontobeadded)") Add option
+            .ui.button.addkey(ng-click="showAdd = !showAdd") Cancel
+
+
+div Click Refresh after Updating Database. Double Check to make sure the options you want are selected.
+.ui.button.add(ng-click="updatedatabase()") Update Database
+.ui.button.add(ng-click="refresh()") Refresh
