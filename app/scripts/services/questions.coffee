@@ -15,7 +15,7 @@ angular.module("interviewappApp")
               (value)->
                 transformedjson = {}
                 for question in value
-                  transformedjson[question['_id']] = question
+                  transformedjson[question['uid']] = question
                 deferred.resolve(transformedjson)
         )
     ]

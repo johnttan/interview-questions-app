@@ -6,7 +6,7 @@ angular.module('interviewappApp')
       Questions.getquestions()
       QuestionsKeys.getquestionskeys()
     $scope.search = {}
-    $scope.questions = Questions.questionsobject
+    $scope.questions = Questions
     $scope.filterlimit = 50
-    $scope.questionskeys = QuestionsKeys.questionskeysobject
+    $scope.questionskeys = QuestionsKeys
   ]

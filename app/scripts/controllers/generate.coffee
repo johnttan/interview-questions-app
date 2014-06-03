@@ -16,13 +16,15 @@ angular.module('interviewappApp')
         picked = []
         z = 0
         value = 'role' if filterby == 'role'
+        if filtered is []
+          return []
         while z < limit[value]
           i = filtered[Math.floor(Math.random() * filtered.length)]
           if i.uid not in pickeduid
             pickeduid.push(i.uuid)
             picked.push(i)
             z++
-      console.log(picked)
+#      console.log(picked)
       return picked
     $scope.generatebutton = ->
       $scope.limitcopy = angular.copy($scope.limit)
@@ -33,12 +35,13 @@ angular.module('interviewappApp')
         console.log(category)
         $scope.generatedqs[category] = $scope.filterquestion(Questions.questionsobject, 'category', category, true, $scope.limitcopy)
     $scope.savegenerated = ->
-        if $scope.candidatename isnt undefined
-          tobeadded = {}
-          for own category, questionarray of $scope.generatedqs
-            tobeadded[category] = questionarray
-          console.log(tobeadded)
-          $scope.addrecentquestions($scope.candidatename, tobeadded)
-          console.log('savegenerated')
-          console.log($scope.recentquestions)
+      if $scope.candidatename isnt undefined
+        tobeadded = {}
+        console.log($scope.generatedqs)
+        for own category, questionarray of $scope.generatedqs
+          tobeadded[category] = questionarray
+        console.log(tobeadded)
+        $scope.addrecentquestions($scope.candidatename, tobeadded)
+        console.log('savegenerated')
+        console.log($scope.recentquestions)
     ]

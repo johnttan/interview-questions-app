@@ -1,0 +1,12 @@
+//
+   Created by John Tan on 6/2/14.
+.ui.form.segment
+    .field(ng-repeat="(key, value) in addquestionskeys()")
+        label {{key}}
+        .ui.left.labeled.icon.input
+            input(type="text" placeholder="{{placeholder(key, value)}}" ng-model="qtobeadded[key]")
+            i.question.icon
+            .ui.corner.label
+                i.icon.asterisk
+    .ui.button.add(ng-click="showAdd = !showAdd" ng-show="showAdd") Clear
+.ui.button.add(ng-click="refresh()") Update Database

@@ -6,7 +6,7 @@ div You can combine queries | Remember to delete unwanted search terms
     input(type="text" placeholder="Question" ng-model="search_question_name")
     i.search.icon
 
-.ui.small.icon.input(ng-repeat="(key, value) in questionskeys | orderBy:predicate")
+.ui.small.icon.input(ng-repeat="(key, value) in questionskeys.questionskeysobject | orderBy:predicate")
     input(type="text" placeholder="{{key}}" ng-model="search[key]")
     i.search.icon
 
@@ -15,7 +15,7 @@ div You can combine queries | Remember to delete unwanted search terms
     input(type="text" placeholder="Limit # of Results" ng-model="filterlimit")
 
 div.ui.items
-    div.item(ng-repeat = "question in questions | limitTo: filterlimit | filter: {question: search_question_name, category: search.category, 'subcategory': search.subcategory, comments: search.comments, role: search.role}")
+    div.item(ng-repeat = "question in questions.questionsobject | limitTo: filterlimit | filter: {question: search_question_name, category: search.category, 'subcategory': search.subcategory, comments: search.comments, role: search.role}")
         a.ui.small.header
             |{{question.question}}
         .ui.horizontal.icon.divider

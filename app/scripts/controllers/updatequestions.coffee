@@ -29,6 +29,8 @@ angular.module('interviewappApp')
       Questions.getquestions()
 
     $scope.qtobeadded = {}
+    $scope.refresh = ->
+      Questions.getquestions()
     $scope.addQuestion = ->
       console.log($scope.qtobeadded)
       EditQuestions.addquestion($scope.qtobeadded)

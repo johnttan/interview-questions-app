@@ -15,7 +15,7 @@ angular.module('interviewappApp')
     $scope.addrecentquestions = (name, tobeadded)->
       questionids = {}
       for own key, value of tobeadded
-        questionids[key] = (question['_id'] for question in tobeadded[key])
+        questionids[key] = (question['uid'] for question in tobeadded[key])
       RecentQuestions.addrecent(name, questionids)
     $scope.clearrecent = ->
       RecentQuestions.clearreccent()

@@ -6,7 +6,9 @@
     "lodash": "~2.4.1",
     "mongoose": "~3.5.5",
     "jade": "latest",
-    "node-uuid": "1.4.1"
+    "node-uuid": "1.4.1",
+    "tedious": "~0.2.3",
+    "mssql": "~0.5.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
