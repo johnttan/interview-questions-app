@@ -1,11 +1,13 @@
 angular.module('interviewappApp')
-.controller 'GenerateCtrl', ['$scope', 'Questions', ($scope, Questions) ->
+.controller 'GenerateCtrl', ['$scope', 'Questions', 'Portfolio', ($scope, Questions, Portfolio) ->
     if Questions.questionsobject is undefined
       Questions.getquestions()
-    $scope.limit = {}
+    $scope.limit = Portfolio.limit
+    $scope.limitcopy = $scope.limit
     $scope.generate = {role: null}
     $scope.generated = {role: 'Role'}
-
+    $scope.generatedqs = Portfolio.generatedqs
+    $scope.Portfolio = Portfolio
     $scope.filterquestion = (questions, filterby, value, random, limit)->
       filtered = questions.filter(
         (q)->
@@ -19,12 +21,14 @@ angular.module('interviewappApp')
         if filtered is []
           return []
         while z < limit[value]
-          i = filtered[Math.floor(Math.random() * filtered.length)]
-          if i.uid not in pickeduid
-            pickeduid.push(i.uuid)
-            picked.push(i)
-            z++
-#      console.log(picked)
+          randomindex = Math.floor(Math.random() * filtered.length)
+          i = filtered[randomindex]
+          if i isnt undefined
+            if i.uid not in pickeduid
+                pickeduid.push(i.uid)
+                picked.push(i)
+          z++
+      console.log(picked)
       return picked
     $scope.generatebutton = ->
       $scope.limitcopy = angular.copy($scope.limit)
@@ -34,14 +38,10 @@ angular.module('interviewappApp')
       for category in $scope.questionskeys.questionskeysobject.category
         console.log(category)
         $scope.generatedqs[category] = $scope.filterquestion(Questions.questionsobject, 'category', category, true, $scope.limitcopy)
+      Portfolio.generatedqs = $scope.generatedqs
+      Portfolio.limit = $scope.limitcopy
+      Portfolio.candidate = $scope.candidatename
+      Portfolio.role = $scope.generated.role
     $scope.savegenerated = ->
-      if $scope.candidatename isnt undefined
-        tobeadded = {}
-        console.log($scope.generatedqs)
-        for own category, questionarray of $scope.generatedqs
-          tobeadded[category] = questionarray
-        console.log(tobeadded)
-        $scope.addrecentquestions($scope.candidatename, tobeadded)
-        console.log('savegenerated')
-        console.log($scope.recentquestions)
+      Portfolio.savecandidate()
     ]

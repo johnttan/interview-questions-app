@@ -1,7 +1,8 @@
 .ui.vertical.menu(ng-controller="SideCtrl")
-    a.teal.item(ng-class="{active: isActive('/')}" href="/") Home
+    a.teal.item(ng-class="{active: isActive('/current')}" href="/current" ng-show="Portfolio.candidate") {{Portfolio.candidate}} (Current)
+    a.teal.item(ng-class="{active: isActive('/')}" href="/") Generate
     a.teal.item(ng-class="{active: isActive('/search')}" href="/search") Search
     //a.teal.item(ng-class="{active: isActive('/browse')}" href="/browse") Browse
     a.teal.item(ng-class="{active: isActive('/update')}" href="/update") Update
     a.teal.item(ng-class="{active: isActive('/updatekeys')}" href="/updatekeys") Update Keys
-    include recentquestions
+    a.teal.item(ng-class="{active: isActive('/recent')}" href="/recent") Recently Generated

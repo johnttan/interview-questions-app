@@ -1,0 +1,45 @@
+//
+   Created by John Tan on 6/13/14.
+
+.ui.button(ng-click="toggleprintview()")
+    i.tasks.icon
+    | Print View
+.ui.button(ng-click="savecandidate()")
+    i.tasks.icon
+    | Save Candidate
+.ui.header.questioncategoryheader(ng-repeat-start="category in questionskeys.questionskeysobject.category") {{category}}
+.ui.horizontal.divider
+.ui.list(ng-repeat-end)
+    div.item(ng-repeat = "question in Portfolio.generatedqs[category] | orderBy:predicate " class="{{category + 'q' + $index}}")
+        .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers" ng-show = "!printview") Answer
+        .content.questionscontent
+            a.ui.small.header#questionsheader
+                | {{question.question}}
+            div
+            .ui.label subcategory |
+                .detail {{question.subcategory}}
+            .ui.label comments |
+                .detail {{question.comments}}
+            div(ng-show="displayanswers || showallanswers")
+                div.ui.horizontal.divider
+                div.answersbox
+                    | {{question.answers}}
+        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['_id'], category)" ng-show = "!printview") Remove from portfolio
+.ui.header.questioncategoryheader {{Portfolio.role}}
+.ui.horizontal.divider
+.ui.list
+    div.item(ng-repeat = "question in Portfolio.generatedqs.Role | orderBy: 'comments' " class = "{{'role'+'q'+$index}}")
+        .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers" ng-show = "!printview") Answer
+        .content.questionscontent
+            a.ui.small.header#questionsheader
+                | {{question.question}}
+            div
+            .ui.label subcategory |
+                .detail {{question.subcategory}}
+            .ui.label comments |
+                .detail {{question.comments}}
+            div(ng-show="displayanswers || showallanswers")
+                div.ui.horizontal.divider
+                div.answersbox
+                    | {{question.answers}}
+        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['_id'], 'Role')" ng-show = "!printview") Remove from portfolio

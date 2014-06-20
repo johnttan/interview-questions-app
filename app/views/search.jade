@@ -30,3 +30,6 @@ div.ui.items
             .detail {{question.comments}}
         div
         .ui.label.answers answers
+        .right.floated.tiny.blue.ui.button(ng-click = "Portfolio.addquestion(question)" ng-show = "!printview") Add to Portfolio
+        .right.floated.tiny.blue.ui.button(ng-click = "Portfolio.addrolequestion(question)" ng-show = "!printview") Add to Portfolio (Role-specific)
+

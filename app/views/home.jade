@@ -4,7 +4,7 @@ div(ng-controller="GenerateCtrl")
     .ui.form
         .ui.header Enter Candidate Name
         .requirednumberofquestions(ng-show="!candidatename") Required
-        input(type="text" placeholder="Interviewee" ng-model="candidatename")
+        input(type="text" placeholder="Interviewee" ng-model="Portfolio.candidate")
     .ui.form(ng-show="!printview")
         .ui.header Select Role
             .sub.header Enter # of questions per category
@@ -38,7 +38,7 @@ div(ng-controller="GenerateCtrl")
     .ui.header.questioncategoryheader(ng-repeat-start="category in questionskeys.questionskeysobject.category") {{category}}
     .ui.horizontal.divider
     .ui.list(ng-repeat-end)
-        div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate | limitTo: limitcopy[category]" class="{{category + 'q' + $index}}")
+        div.item(quick-ng-repeat = "question in generatedqs[category] | orderBy:predicate " class="{{category + 'q' + $index}}")
             .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers" ng-show = "!printview") Answer
             .content.questionscontent
                 a.ui.small.header#questionsheader
@@ -55,7 +55,7 @@ div(ng-controller="GenerateCtrl")
     .ui.header.questioncategoryheader {{generated.role}}
     .ui.horizontal.divider
     .ui.list
-        div.item(quick-ng-repeat = "question in generatedqs.Role | orderBy: 'comments' | limitTo: limitcopy['role']" class = "{{'role'+'q'+$index}}")
+        div.item(quick-ng-repeat = "question in generatedqs.Role | orderBy: 'comments' " class = "{{'role'+'q'+$index}}")
             .left.floated.tiny.blue.ui.button(ng-click = "displayanswers = !displayanswers" ng-show = "!printview") Answer
             .content.questionscontent
                 a.ui.small.header#questionsheader

@@ -1,13 +1,27 @@
 angular.module("interviewappApp")
-.service "RecentQuestions", ['localStorageService', '$rootScope',
+.service "RecentQuestions", ['localStorageService', '$rootScope', '$resource',  '$http',
     class RecentQuestions
-      constructor: (@localStorageService, @$rootScope)->
+      constructor: (@localStorageService, @$rootScope, @$resource, @$http)->
+      getrecentquery: ->
+        @$resource "/getrecent",
+          get:
+            method: "GET",
+            isArray: false
+      removeallrecent: ->
+        @$resource "/removerecent",
+          get:
+            method: "GET"
       getrecent: ->
-        @recentquestions = @localStorageService.get('recentquestions')
+        @recentquestions = @getrecentquery().get()
         if @recentquestions is null
           @recentquestions = {}
-        @$rootScope.$broadcast('recentquestions', @recentquestions)
-      addrecent: (name, tobeadded)->
+        @recentquestions.$promise.then((result)->
+          @recentquestions = result
+          for own key, value of @recentquestions
+            if key not in ['$resolved', '$promise']
+              @recentquestions[key] = JSON.parse(value)
+        )
+      addrecent: (name, role, limit, tobeadded, update)->
         if @recentquestions is null
           @recentquestions = {}
         d = new Date()
@@ -16,17 +30,29 @@ angular.module("interviewappApp")
         console.log('servicetobeadded')
         console.log(tobeadded)
         userdata = {
-          'name': name
+          'name': name,
+          'hashedname': hashedname,
+          'role': role,
           'time': time,
-          'questions': tobeadded
+          'questions': tobeadded,
+          'limit': limit
         }
         @recentquestions[hashedname] = userdata
-        @localStorageService.add('recentquestions', @recentquestions)
+        if update
+          @clearrecentq(update)
+          @$http.post('/updaterecent', @recentquestions[hashedname])
+        else
+          @$http.post('/insertrecent', @recentquestions[hashedname])
         @$rootScope.$broadcast('recentquestions', @recentquestions)
 #        @recentquestions
+      saverecent: (hashedname)->
+        @$http.post('/updaterecent', @recentquestions[hashedname])
       clearreccent: ->
-        @localStorageService.clearAll()
         @recentquestions = {}
+        @removeallrecent().get()
         @$rootScope.$broadcast('recentquestions', @recentquestions)
-#        @recentquestions
+      clearrecentq: (candidate)->
+        delete @recentquestions[candidate.hashedname]
+        @$http.post('/removerecent', candidate)
+
   ]

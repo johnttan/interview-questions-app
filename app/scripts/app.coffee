@@ -23,9 +23,12 @@ angular.module('interviewappApp', [
       .when '/updatekeys',
         controller: 'UpdateKeysCtrl'
         templateUrl: 'updatekeys'
-      .when '/recent/:recentname/:time',
-        controller: 'RecentViewCtrl'
-        templateUrl: 'recentview'
+      .when '/recent',
+        controller: 'RecentQuestionsCtrl'
+        templateUrl: 'recentquestions'
+      .when '/current',
+        controller: 'CurrentCandidateCtrl'
+        templateUrl: 'current'
       .otherwise
         redirectTo: '/'
 
