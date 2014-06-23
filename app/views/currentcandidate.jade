@@ -24,7 +24,7 @@
                 div.ui.horizontal.divider
                 div.answersbox
                     | {{question.answers}}
-        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['_id'], category)" ng-show = "!printview") Remove from portfolio
+        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['uid'], category)" ng-show = "!printview") Remove from portfolio
 .ui.header.questioncategoryheader {{Portfolio.role}}
 .ui.horizontal.divider
 .ui.list
@@ -42,4 +42,4 @@
                 div.ui.horizontal.divider
                 div.answersbox
                     | {{question.answers}}
-        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['_id'], 'Role')" ng-show = "!printview") Remove from portfolio
+        .right.floated.tiny.blue.ui.button(ng-click = "deletequestion(question['uid'], 'Role')" ng-show = "!printview") Remove from portfolio

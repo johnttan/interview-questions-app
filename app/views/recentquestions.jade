@@ -13,4 +13,6 @@ div.ui.items
                 | {{candidate.name}}
             p.description
                 | {{candidate.comments}}
-            .right.floated.tiny.blue.ui.button(ng-click = "deletecandidate(candidate)") DELETE CANDIDATE
+
+        div Created on: {{candidate.timestring | date : 'short'}}
+        .right.floated.tiny.blue.ui.button(ng-click = "deletecandidate(candidate)") DELETE CANDIDATE

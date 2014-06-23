@@ -4,9 +4,16 @@ angular.module("interviewappApp")
       constructor: (@RecentQuestions, @Questions, @generatedqs, @limit, @candidate, @role, @hashedname, @userdata)->
         @generatedqs = {}
         @limit = {}
+      newcandidate: ->
+        @generatedqs = {}
+        @limit = {}
+        @candidate = null
+        @role = null
+        @hashedname = null
+        @userdata = {}
       deletequestion: (qid, category)->
         console.log(qid, category)
-        @generatedqs[category] = (x for x in @generatedqs[category] when x['_id'] != qid)
+        @generatedqs[category] = (x for x in @generatedqs[category] when x['uid'] != qid)
       addquestion: (question)->
         if question.category not of @generatedqs
           @generatedqs[question.category] = []
@@ -22,7 +29,7 @@ angular.module("interviewappApp")
 
       savecandidate: ()->
         if @candidate isnt undefined
-P          tobeadded = {}
+          tobeadded = {}
           for own category, questionarray of @generatedqs
             tobeadded[category] = questionarray
           console.log(tobeadded)

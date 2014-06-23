@@ -1,6 +1,9 @@
 //
    Created by John Tan on 4/4/14.
 div(ng-controller="GenerateCtrl")
+    .ui.button(ng-click="newcandidate()")
+        i.tasks.icon
+        |New Candidate (Clears data)
     .ui.form
         .ui.header Enter Candidate Name
         .requirednumberofquestions(ng-show="!candidatename") Required

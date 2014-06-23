@@ -40,8 +40,14 @@ angular.module('interviewappApp')
         $scope.generatedqs[category] = $scope.filterquestion(Questions.questionsobject, 'category', category, true, $scope.limitcopy)
       Portfolio.generatedqs = $scope.generatedqs
       Portfolio.limit = $scope.limitcopy
-      Portfolio.candidate = $scope.candidatename
       Portfolio.role = $scope.generated.role
     $scope.savegenerated = ->
       Portfolio.savecandidate()
+    $scope.newcandidate = ->
+      Portfolio.newcandidate()
+      $scope.limit = Portfolio.limit
+      $scope.limitcopy = $scope.limit
+      $scope.generate = {role: null}
+      $scope.generated = {role: 'Role'}
+      $scope.generatedqs = Portfolio.generatedqs
     ]

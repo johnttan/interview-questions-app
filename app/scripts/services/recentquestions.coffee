@@ -27,6 +27,9 @@ angular.module("interviewappApp")
         d = new Date()
         time = d.getTime()
         hashedname = time + '__' + name
+        dateVal = "/Date(" + String(time) + ")/"
+        createdtime = new Date(parseFloat( dateVal.substr(6 )))
+
         console.log('servicetobeadded')
         console.log(tobeadded)
         userdata = {
@@ -34,12 +37,14 @@ angular.module("interviewappApp")
           'hashedname': hashedname,
           'role': role,
           'time': time,
+          'timestring': createdtime,
           'questions': tobeadded,
           'limit': limit
         }
         @recentquestions[hashedname] = userdata
         if update
           @clearrecentq(update)
+          console.log("updatingrecentcandidate")
           @$http.post('/updaterecent', @recentquestions[hashedname])
         else
           @$http.post('/insertrecent', @recentquestions[hashedname])
