@@ -11,3 +11,4 @@ lib/config/env/production.js
 .idea/
 lib/controllers/sqlconfig.js
 devdocs/
+.editorconfig
