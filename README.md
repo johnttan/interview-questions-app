@@ -10,9 +10,9 @@ View demo at:
 http://interviewapp1.herokuapp.com/
 
 
-The application was developed for intranet use with SQL Server 2012, while the heroku hosted app is using MongoDB by MongoLab, so the heroku app is outdated in terms of features/bugs. You can see where things diverge starting in the MigrationToSQL branch.
+The Heroku app is outdated in terms of features/bugs because the end product is built to run on SQL server 2012. The Heroku app uses MongoDB by MongoLab. You can see where things start to diverge in the MigrationToSQL branch.
 
 
 View user guide and documentation at:
 
-http://ostzi.github.io/interviewappdocs/
+http://ostzi.github.io/interviewappdocs
