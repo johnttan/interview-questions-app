@@ -15,4 +15,4 @@ The Heroku app is outdated in terms of features/bugs because the end product is 
 
 View user guide and documentation at:
 
-http://ostzi.github.io/interviewappdocs
+http://johnttan.github.io/interviewappdocs
